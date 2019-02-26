@@ -8,14 +8,16 @@ const swapper = (array, x, y) => {
 
 function bubbleSort(array) {
   let len = array.length;
+  let isSorted = false;
 
-  while (len > 0) {
+  while (!isSorted) {
+    isSorted = true;
     for (let i = 0; i < len; i++) {
       if (array[i] > array[i + 1]) {
         swapper(array, i, i + 1);
+        isSorted = false;
       }
     }
-
     len--;
   }
 
