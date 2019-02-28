@@ -1,10 +1,9 @@
 function isPalindrome(string) {
+  if (string.length === 1 || !string.length) return true;
+
   return (
-    string ===
-    string
-      .split('')
-      .reverse()
-      .join('')
+    string[0] === string[string.length - 1] &&
+    isPalindrome(string.slice(1, string.length - 1))
   );
 }
 
