@@ -1,10 +1,11 @@
 function isPalindrome(string) {
-  let reversedString = string
-    .split('')
-    .reverse()
-    .join('');
-
-  return string === reversedString;
+  return (
+    string ===
+    string
+      .split('')
+      .reverse()
+      .join('')
+  );
 }
 
 console.log(isPalindrome('abcdcba'));
