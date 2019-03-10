@@ -1,11 +1,11 @@
-const permutationsHelper = (array, currentPermutation, permutations) => {
-  if (!array.length && currentPermutation.length) {
-    permutations.push(currentPermutation);
+const permutationsHelper = (array, currentPerm, perms) => {
+  if (!array.length && currentPerm.length) {
+    perms.push(currentPerm);
   } else {
     for (let i = 0; i < array.length; i++) {
       const newArray = array.slice(0, i).concat(array.slice(i + 1));
-      const newPermutation = currentPermutation.concat(array[i]);
-      permutationsHelper(newArray, newPermutation, permutations);
+      const newPermutation = currentPerm.concat(array[i]);
+      permutationsHelper(newArray, newPermutation, perms);
     }
   }
 };
