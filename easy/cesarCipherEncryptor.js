@@ -1,4 +1,4 @@
-let LETTERS = [
+let letters = [
   'a',
   'b',
   'c',
@@ -29,10 +29,10 @@ let LETTERS = [
 
 function caesarCipherEncryptor(string, key) {
   return string.split('').map(e => {
-    let index = LETTERS.indexOf(e);
+    let index = letters.indexOf(e);
     let newIndex = index + (key % 26);
 
-    return newIndex <= 25 ? LETTERS[newIndex] : LETTERS[newIndex % 26];
+    return newIndex <= 25 ? letters[newIndex] : letters[newIndex % 26];
   });
 }
 
