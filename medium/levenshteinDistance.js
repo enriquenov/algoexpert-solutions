@@ -30,3 +30,6 @@ function levenshteinDistance(str1, str2) {
 }
 
 console.log(levenshteinDistance('lkajsd', 'lkjasdldkas'));
+console.log(levenshteinDistance('homer', 'comensal'));
+console.log(levenshteinDistance('lowecase', 'promises'));
+console.log(levenshteinDistance('artificial', 'intelligence'));
