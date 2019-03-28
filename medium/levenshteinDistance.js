@@ -29,4 +29,4 @@ function levenshteinDistance(str1, str2) {
   return twodarray[str2.length][str1.length];
 }
 
-console.log(levenshteinDistance('abc', 'yabd'));
+console.log(levenshteinDistance('lkajsd', 'lkjasdldkas'));
