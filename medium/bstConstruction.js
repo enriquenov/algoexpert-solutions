@@ -7,7 +7,7 @@ class BST {
 
   insert(value) {
     let currentNode = this;
-    while (true) {
+    while (currentNode !== null) {
       if (value < currentNode.value) {
         if (currentNode.left === null) {
           currentNode.left = new BST(value);
@@ -16,11 +16,11 @@ class BST {
           currentNode = currentNode.left;
         }
       } else if (currentNode.right === null) {
-          currentNode.right = new BST(value);
-          break;
-        } else {
-          currentNode = currentNode.right;
-        }
+        currentNode.right = new BST(value);
+        break;
+      } else {
+        currentNode = currentNode.right;
+      }
     }
     return this;
   }
